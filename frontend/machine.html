@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Machine Detail</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1 id="title">Machine Detail</h1>
+        <a class="link" href="index.html">Voltar ao dashboard</a>
+    </header>
+    <main class="detail">
+        <section class="panel">
+            <h2>OEE Histórico</h2>
+            <canvas id="oeeChart"></canvas>
+        </section>
+        <section class="panel">
+            <h2>Eventos</h2>
+            <ul id="events" class="timeline"></ul>
+        </section>
+    </main>
+    <script src="js/machine.js"></script>
+</body>
+</html>

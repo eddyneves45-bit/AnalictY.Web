@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #111827;
+    color: #fff;
+    margin: 0;
+}
+
+header {
+    padding: 18px;
+    background: #1f2937;
+    text-align: center;
+    border-bottom: 1px solid #374151;
+}
+
+header h1 {
+    margin: 0 0 6px 0;
+    font-size: 28px;
+}
+
+#last-update {
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 15px;
+    padding: 15px;
+}
+
+.card {
+    padding: 16px;
+    border-radius: 12px;
+    background: #2a2a2a;
+    transition: 0.2s;
+    border-left: 6px solid #64748b;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    background: #303030;
+}
+
+.card.running {
+    border-left-color: #00ff88;
+}
+
+.card.stopped {
+    border-left-color: #ff4d4d;
+}
+
+.card.degraded {
+    border-left-color: #ffaa00;
+}
+
+.card h3 {
+    margin: 0 0 12px 0;
+    font-size: 18px;
+    word-break: break-word;
+}
+
+.metric {
+    font-size: 14px;
+    opacity: 0.85;
+    margin: 7px 0;
+}
+
+.metric strong {
+    opacity: 1;
+}
+
+.empty,
+.error {
+    color: #9ca3af;
+    padding: 20px;
+}

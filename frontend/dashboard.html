@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MES Dashboard</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #e5e7eb;
+        }
+        header {
+            padding: 24px;
+            background: #111827;
+            border-bottom: 1px solid #334155;
+        }
+        h1 {
+            margin: 0;
+        }
+        #machines {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+            padding: 24px;
+        }
+        .card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 18px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+        .state {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: #334155;
+        }
+        .running {
+            background: #16a34a;
+        }
+        .stopped {
+            background: #dc2626;
+        }
+        .muted {
+            color: #94a3b8;
+        }
+    </style>
+    <script>
+        async function load() {
+            try {
+                const res = await fetch("/api/mes/machines");
+                const data = await res.json();
+                const container = document.getElementById("machines");
+                container.innerHTML = "";
+
+                if (!data.length) {
+                    container.innerHTML = "<p class='muted'>Nenhuma máquina semântica encontrada.</p>";
+                    return;
+                }
+
+                data.forEach(m => {
+                    const state = m.state || "unknown";
+                    const metrics = m.metrics || {};
+                    const oee = m.oee || {};
+                    const div = document.createElement("div");
+                    div.className = "card";
+                    div.innerHTML = `
+                        <h3>${m.tag}</h3>
+                        <p>Estado: <span class="state ${state}">${state}</span></p>
+                        <p>Motivo: ${m.reason || "-"}</p>
+                        <p>Tempo rodando: ${(metrics.running_time || 0).toFixed(0)}s</p>
+                        <p>Tempo parado: ${(metrics.stopped_time || 0).toFixed(0)}s</p>
+                        <p>Disponibilidade: ${((oee.availability || 0) * 100).toFixed(1)}%</p>
+                        <p>Performance: ${((oee.performance || 0) * 100).toFixed(1)}%</p>
+                        <p>Qualidade: ${((oee.quality || 0) * 100).toFixed(1)}%</p>
+                        <p>OEE: ${((oee.oee || 0) * 100).toFixed(1)}%</p>
+                    `;
+                    container.appendChild(div);
+                });
+            } catch (error) {
+                document.getElementById("machines").innerHTML = `<p>Erro ao carregar dashboard: ${error}</p>`;
+            }
+        }
+
+        setInterval(load, 2000);
+    </script>
+</head>
+<body onload="load()">
+    <header>
+        <h1>MES Dashboard</h1>
+        <p class="muted">Status, tempo operacional e OEE em tempo real</p>
+    </header>
+    <main id="machines"></main>
+</body>
+</html>

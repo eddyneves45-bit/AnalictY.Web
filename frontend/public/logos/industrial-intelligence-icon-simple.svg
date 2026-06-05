@@ -1,0 +1,23 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Ícone simplificado de inteligência industrial</title>
+  <desc id="desc">Favicon com engrenagem, letra M, conectividade e dados.</desc>
+  <defs>
+    <linearGradient id="gear" x1="32" y1="24" x2="194" y2="224" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4B5563"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="red" x1="150" y1="50" x2="226" y2="206" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EF4444"/>
+      <stop offset="1" stop-color="#B91C1C"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#gear)" fill-rule="evenodd" clip-rule="evenodd" d="M106 10h44l8 34c11 4 22 8 32 14l30-18 30 30-18 30c6 10 10 21 14 32l34 8v44l-34 8c-4 11-8 22-14 32l18 30-30 30-30-18c-10 6-21 10-32 14l-8 34h-44l-8-34c-11-4-22-8-32-14l-30 18-30-30 18-30c-6-10-10-21-14-32l-34-8v-44l34-8c4-11 8-22 14-32L6 70l30-30 30 18c10-6 21-10 32-14l8-34Zm22 50a68 68 0 1 0 0 136 68 68 0 0 0 0-136Z"/>
+  <path d="M70 180V88l30 32 30-32v92" stroke="#111827" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M70 88l30 32 30-32" stroke="#F9FAFB" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M57 82l13 6M130 88l35-29M165 59l31 32M196 91l27-27" stroke="#111827" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="57" cy="82" r="11" fill="#F9FAFB" stroke="#111827" stroke-width="8"/>
+  <circle cx="130" cy="88" r="11" fill="#F9FAFB" stroke="url(#red)" stroke-width="8"/>
+  <circle cx="196" cy="91" r="10" fill="#F9FAFB" stroke="#111827" stroke-width="7"/>
+  <circle cx="223" cy="64" r="13" fill="url(#red)"/>
+  <path d="M160 188v-36h19v36h-19Zm28 0v-55h19v55h-19Zm28 0v-78h19v78h-19Z" fill="url(#red)"/>
+</svg>

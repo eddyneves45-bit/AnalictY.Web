@@ -1,0 +1,11 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">iioT AnalictY</title>
+  <desc id="desc">Favicon da plataforma iioT AnalictY</desc>
+  <rect width="256" height="256" rx="56" fill="#111827"/>
+  <path d="M56 72h24v112H56V72Zm40 0h24v112H96V72Z" fill="#F9FAFB"/>
+  <path d="M140 72h72v24h-24v88h-24V96h-24V72Z" fill="#EF4444"/>
+  <circle cx="68" cy="44" r="12" fill="#EF4444"/>
+  <circle cx="108" cy="44" r="12" fill="#EF4444"/>
+  <circle cx="200" cy="44" r="12" fill="#F9FAFB"/>
+  <path d="M48 212h160" stroke="#EF4444" stroke-width="16" stroke-linecap="round"/>
+</svg>
