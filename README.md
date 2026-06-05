@@ -51,7 +51,7 @@ Este repositório está sendo migrado progressivamente do `scada_mes`.
 - [x] Remover rotas técnicas (14 rotas removidas)
 - [x] Limpar config/page.tsx (removidas seções técnicas)
 - [x] Remover lógica de /security
-- [ ] Build (validar após limpeza)
+- [x] Build (validar após limpeza)
 
 ## Rotas Removidas (Técnicas - vão para Manager)
 - /logs
