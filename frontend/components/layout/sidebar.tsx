@@ -152,7 +152,7 @@ export function Sidebar() {
       {/* Menu */}
       <nav className="p-4 space-y-1">
         {menuItems.map((item) => {
-          const isActive = pathname === item.href || (item.href === '/config' && ['/users', '/audit'].includes(pathname))
+          const isActive = pathname === item.href
           return (
             <button
               key={item.href}

@@ -49,15 +49,18 @@ npm run build
 
 ## Alterações de Código
 - **config/page.tsx**: Reescrito completamente. Removidas seções técnicas (OPC UA, MQTT, MySQL, Weintek, Atualizações, Servidor local, Logs, Usuários, Auditoria, Simulador, Diagnóstico, Telegram). Mantidas apenas: TAGs, Máquinas, Turnos, Alertas, Dashboards, Fuso horário. Arquivo reduzido de ~2082 linhas para ~250 linhas.
+- **sidebar.tsx**: Removida lógica de ativação para /users e /audit (linhas de navegação técnica).
 - **/security**: Nenhuma referência encontrada no código - rota já removida anteriormente.
 
-## Build Output
-✓ Compiled successfully in 14.6s
+## Build Output (Após Limpeza)
+✓ Compiled successfully in 5.4s
 ✓ Linting and checking validity of types
 ✓ Collecting page data
 ✓ Generating static pages (27/27)
 ✓ Collecting build traces
 ✓ Finalizing page optimization
+
+**Nota:** /config reduziu de 14.4 kB para 5.64 kB após limpeza de código técnico
 
 ## Páginas Geradas
 27 páginas estáticas/dinâmicas
