@@ -4,7 +4,7 @@
 05/06/2026
 
 ## Status
-✅ **Build com êxito**
+⏳ **Aguardando validação após limpeza**
 
 ## Comandos Executados
 ```powershell
@@ -33,7 +33,7 @@ npm run build
 - / (home)
 - /alerts
 - /bi (Business Intelligence)
-- /config (apenas parte operacional)
+- /config (limpo - apenas operacional: TAGs, Máquinas, Turnos, Alertas, Dashboards, Fuso horário)
 - /dashboard
 - /dashboards
 - /downtime-reasons
@@ -47,25 +47,25 @@ npm run build
 - /status
 - /tags
 
+## Alterações de Código
+- **config/page.tsx**: Reescrito completamente. Removidas seções técnicas (OPC UA, MQTT, MySQL, Weintek, Atualizações, Servidor local, Logs, Usuários, Auditoria, Simulador, Diagnóstico, Telegram). Mantidas apenas: TAGs, Máquinas, Turnos, Alertas, Dashboards, Fuso horário. Arquivo reduzido de ~2082 linhas para ~250 linhas.
+- **/security**: Nenhuma referência encontrada no código - rota já removida anteriormente.
+
 ## Build Output
-✓ Compiled successfully in 10.1s
-✓ Linting and checking validity of types
-✓ Collecting page data
-✓ Generating static pages (27/27)
-✓ Collecting build traces
+⏳ **Aguardando execução**
 
 ## Páginas Geradas
-27 páginas estáticas/dinâmicas
+⏳ **Aguardando execução**
 
 ## Erros
-0 erros
+⏳ **Aguardando execução**
 
 ## Próximos Passos
 1. Ajustar URL da API para apontar para AnalictY.Server
-2. Remover referências às rotas técnicas na navegação
-3. Testar integração com Server
+2. Testar integração com Server
+3. Validar endpoints principais
 
 ## Observações
-- Frontend copiado do `scada_mes` sem alterações de código
-- Apenas rotas técnicas foram removidas fisicamente
-- Configuração operacional em /config precisa ser limpa de seções técnicas
+- Frontend copiado do `scada_mes` e limpo de funcionalidades técnicas
+- /config agora contém apenas configurações operacionais
+- Lógica de MFA (/security) removida - configuração de segurança será feita no Manager

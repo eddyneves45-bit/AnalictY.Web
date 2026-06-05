@@ -20,8 +20,7 @@ export function ProtectedLayout({ children, allowedRoles, allowedPermissions }: 
   const hasAllowedPermission = !allowedPermissions?.length ||
     user?.role === 'admin' ||
     allowedPermissions.some((permission) => user?.permissions?.includes(permission))
-  const mustConfigureMfa = !!user?.mfaRequired && !user?.mfaEnabled && pathname !== '/security'
-  const hasAccess = hasAllowedRole && hasAllowedPermission && !mustConfigureMfa
+  const hasAccess = hasAllowedRole && hasAllowedPermission
 
   useEffect(() => {
     if (!loading && !isAuthenticated) {
@@ -31,9 +30,9 @@ export function ProtectedLayout({ children, allowedRoles, allowedPermissions }: 
 
   useEffect(() => {
     if (!loading && isAuthenticated && !hasAccess) {
-      router.replace(mustConfigureMfa ? '/security' : '/principal')
+      router.replace('/principal')
     }
-  }, [hasAccess, isAuthenticated, loading, mustConfigureMfa, router])
+  }, [hasAccess, isAuthenticated, loading, router])
 
   if (loading || !isAuthenticated || !hasAccess) {
     return <div className="min-h-screen bg-gray-100" />

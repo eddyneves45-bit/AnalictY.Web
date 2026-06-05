@@ -42,21 +42,38 @@ app/
 
 Este repositório está sendo migrado progressivamente do `scada_mes`.
 
-**Fase atual:** W1 - Base do Web
+**Fase atual:** W2 - Web limpo e compilando
 
 - [x] Criar README
-- [ ] Copiar documentação WEB_SCOPE.md
-- [ ] Copiar .gitignore
-- [ ] Copiar frontend
-- [ ] Remover rotas técnicas
-- [ ] Build
+- [x] Copiar documentação WEB_SCOPE.md
+- [x] Copiar .gitignore
+- [x] Copiar frontend
+- [x] Remover rotas técnicas (14 rotas removidas)
+- [x] Limpar config/page.tsx (removidas seções técnicas)
+- [x] Remover lógica de /security
+- [ ] Build (validar após limpeza)
+
+## Rotas Removidas (Técnicas - vão para Manager)
+- /logs
+- /local-server
+- /database-browser
+- /mysql-console
+- /mqtt-monitor
+- /opc-browser
+- /security
+- /connections
+- /production-diagnostics
+- /simulator
+- /audit
+- /users
+- /weintek-browser
+- /telegram-notifications
 
 ## Próximos Passos
 
-1. Copiar frontend do `scada_mes`
-2. Remover telas técnicas (logs, database-browser, etc.)
-3. Ajustar URL da API para apontar para Server
-4. Build e validação
+1. Ajustar URL da API para apontar para Server
+2. Testar integração Server ↔ Web
+3. Validar endpoints principais
 
 ## Documentação
 
