@@ -71,7 +71,7 @@ Este repositório está sendo migrado progressivamente do `scada_mes`.
 
 ## Próximos Passos
 
-1. Ajustar URL da API para apontar para Server
+1. Configurar NEXT_PUBLIC_API_URL em .env.local para apontar para Server
 2. Testar integração Server ↔ Web
 3. Validar endpoints principais
 
